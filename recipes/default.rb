@@ -16,3 +16,11 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
+
+ark 'jboss' do
+	url node['jboss']['url']
+	checksum node['jboss']['checksum']
+	version node['jboss']['version']
+	owner node['jboss']['user']
+	action :install
+end
