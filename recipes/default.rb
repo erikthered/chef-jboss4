@@ -20,6 +20,22 @@
 include_recipe "java"
 include_recipe "user"
 
+jboss_home = node['jboss']['home']
+
+ruby_block  "set-env-jboss-home" do
+  block do
+    ENV["JBOSS_HOME"] = jboss_home
+  end
+  not_if { ENV["JBOSS_HOME"] == jboss_home }
+end
+
+file "/etc/profile.d/jboss.sh" do
+  content <<-EOS
+    export JBOSS_HOME=#{node['jboss']['home']}
+  EOS
+  mode 0755
+end
+
 user_account node['jboss']['user'] do 
 	comment "JBoss application server user"
 	action :create
@@ -33,3 +49,4 @@ ark 'jboss' do
 	group node['jboss']['user']
 	action :install
 end
+
