@@ -1,4 +1,4 @@
-name             "chef-jboss4"
+name             "jboss"
 maintainer       "Erik Nelson"
 maintainer_email "erik.david.nelson@gmail.com"
 license          "Apache 2.0"
