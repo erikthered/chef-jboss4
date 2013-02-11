@@ -3,3 +3,7 @@ default['jboss']['checksum'] = "48797e150ee7dd6e035290fab86f17a5fe7d174b4980e941
 default['jboss']['version'] = "4.2.3.GA"
 default['jboss']['user'] = "jboss"
 default['jboss']['home'] = "/usr/local/jboss"
+
+# Runtime options
+default['jboss']['host'] = "0.0.0.0"
+default['jboss']['configuration'] = "default"
