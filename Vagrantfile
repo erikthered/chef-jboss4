@@ -58,7 +58,7 @@ Vagrant::Config.run do |config|
 
     chef.run_list = [
       "recipe[java::default]",
-      "recipe[chef-jboss4::default]"
+      "recipe[jboss::default]"
     ]
   end
 end
