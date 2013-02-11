@@ -50,3 +50,13 @@ ark 'jboss' do
 	action :install
 end
 
+template '/etc/init.d/jboss' do
+	source 'jboss_init_redhat.sh.erb'
+	mode '0755'
+	owner 'root'
+	group 'root'
+end
+
+service 'jboss' do
+	action :start
+end
