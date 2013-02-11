@@ -54,9 +54,6 @@ Vagrant::Config.run do |config|
         :server_debian_password => 'debpass',
         :server_repl_password => 'replpass'
       },
-      :jboss => {
-        :user => 'vagrant'
-      }
     }
 
     chef.run_list = [

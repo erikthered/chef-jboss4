@@ -18,6 +18,12 @@
 #
 
 include_recipe "java"
+include_recipe "user"
+
+user_account node['jboss']['user'] do 
+	comment "JBoss application server user"
+	action :create
+end
 
 ark 'jboss' do
 	url node['jboss']['url']
