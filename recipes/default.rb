@@ -30,5 +30,6 @@ ark 'jboss' do
 	checksum node['jboss']['checksum']
 	version node['jboss']['version']
 	owner node['jboss']['user']
+	group node['jboss']['user']
 	action :install
 end
