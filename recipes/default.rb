@@ -17,6 +17,8 @@
 # limitations under the License.
 #
 
+include_recipe "java"
+
 ark 'jboss' do
 	url node['jboss']['url']
 	checksum node['jboss']['checksum']
