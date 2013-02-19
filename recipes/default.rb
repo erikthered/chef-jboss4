@@ -56,5 +56,5 @@ template '/etc/init.d/jboss' do
 end
 
 service 'jboss' do
-	action :start
+	action [:enable,:start]
 end
