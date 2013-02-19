@@ -30,9 +30,7 @@ ruby_block  "set-env-jboss-home" do
 end
 
 file "/etc/profile.d/jboss.sh" do
-  content <<-EOS
-    export JBOSS_HOME=#{node['jboss']['home']}
-  EOS
+  content "export JBOSS_HOME=#{node['jboss']['home']}"
   mode 0755
 end
 
