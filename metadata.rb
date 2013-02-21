@@ -8,7 +8,6 @@ version          "0.1.0"
 
 depends "ark"
 depends "java"
-depends "user"
 
 supports "centos"
 supports "ubuntu"
