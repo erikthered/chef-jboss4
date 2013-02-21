@@ -53,7 +53,7 @@ ark 'jboss' do
 end
 
 template '/etc/init.d/jboss' do
-	source 'jboss_init_redhat.sh.erb'
+	source node['jboss']['initscript']
 	mode '0755'
 	owner 'root'
 	group 'root'

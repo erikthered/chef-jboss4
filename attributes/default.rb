@@ -7,3 +7,12 @@ default['jboss']['home'] = "/usr/local/jboss"
 # Runtime options
 default['jboss']['host'] = "0.0.0.0"
 default['jboss']['configuration'] = "default"
+
+case platform
+when "redhat", "centos", "scientific", "fedora", "suse", "amazon"
+	default['jboss']['initscript'] = "jboss_init_redhat.sh.erb"
+when "debian", "ubuntu"
+	default['jboss']['initscript'] = "jboss_init_ubuntu.sh.erb"
+else
+	default['jboss']['initscript'] = "jboss_init_redhat.sh.erb"
+end
