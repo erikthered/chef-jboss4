@@ -57,6 +57,8 @@ Vagrant::Config.run do |config|
     }
 
     chef.run_list = [
+      "recipe[user::default]",
+      "recipe[ark::default",
       "recipe[java::default]",
       "recipe[jboss::default]"
     ]
