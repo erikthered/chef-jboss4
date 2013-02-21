@@ -20,6 +20,10 @@
 include_recipe "java"
 include_recipe "user"
 
+package "unzip" do
+	action :install
+end
+
 jboss_home = node['jboss']['home']
 
 ruby_block  "set-env-jboss-home" do
