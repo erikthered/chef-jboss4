@@ -10,3 +10,4 @@ depends "ark"
 depends "java"
 
 supports "centos"
+supports "ubuntu"
